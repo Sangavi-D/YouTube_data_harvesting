@@ -8,10 +8,10 @@ from sqlalchemy import create_engine
 import streamlit as st
 
 # MySQL Connection
-user = "root"
-password = ""
-host = "localhost"  # Or the actual IP address of your MySQL server
-database = "youtube_data"
+user = "user_name"
+password = "your_password"
+host = "host_name"  # Or the actual IP address of your MySQL server
+database = "your_database_name"
 
 connection_url = f"mysql+mysqlconnector://{user}:{password}@{host}/{database}"
 engine = create_engine(connection_url)
@@ -19,7 +19,7 @@ engine = create_engine(connection_url)
 # YouTube API Connection
 api_service_name = "youtube"
 api_version = "v3"
-api_key = "AIzaSyCIJLMpAFim4ToNW1Ln1ytgKfSHHbTjfw0" #Insert your own api key
+api_key = "your api key" #Insert your own api key
 youtube = googleapiclient.discovery.build(api_service_name, api_version, developerKey=api_key)
 
 # Streamlit UI
